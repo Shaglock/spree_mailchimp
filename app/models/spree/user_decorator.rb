@@ -2,8 +2,6 @@ module Spree
   PermittedAttributes.user_attributes << :mailchimp_opt_in
 
   User.class_eval do
-    after_save :sync_mailchimp_preferences
-
     private 
 
     def sync_mailchimp_preferences
